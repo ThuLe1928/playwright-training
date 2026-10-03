@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { PlaywrightHomePage } from '../pages/PlaywirghtHomePage';
+import { PlaywrightHomePage } from '../pages/PlaywrightHomePage';
 
 test('Verify that the "Get started" link navigates to the correct page', async ({ page }) => {
     const homePage = new PlaywrightHomePage(page);
