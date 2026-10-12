@@ -1,5 +1,14 @@
 export const todoTasks = [
-  'Playwright',
-  'Git',
-  'TypeScript'
+  {
+    task: 'learn playwright',
+    expectedText: 'learn playwright',
+  },
+  {
+    task: 'learn git',
+    expectedText: 'learn git',
+  },
+  {
+    task: 'learn typescript',
+    expectedText: 'learn typescript',
+  },
 ];
