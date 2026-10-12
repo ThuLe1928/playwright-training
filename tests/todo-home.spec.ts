@@ -1,15 +1,22 @@
 import { test, expect } from '@playwright/test';
 import { TodoPage } from '../pages/TodoPage';
+import { todoTasks } from '../test-data/todoData';
+import { createTodoName } from '../helpers/textHelper';
 
-test('Add a new todo task', async ({ page }) => {
+todoTasks.forEach((task) => {
+
+test(`Add learn ${task}`, async ({ page }) => {
     const todoPage = new TodoPage(page);
 
     await todoPage.goto();
+
+    const generatedTask = createTodoName(task);
     
-    await todoPage.inputTodoTask('learn playwright');
+    await todoPage.inputTodoTask(generatedTask);
     await todoPage.todoInput.press('Enter');
 
     await expect(
-         page.getByText('learn playwright', { exact: true })
+         page.getByText(generatedTask, { exact: true })
     ).toBeVisible();
+});
 });
