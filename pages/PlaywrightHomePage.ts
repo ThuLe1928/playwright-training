@@ -1,8 +1,8 @@
 import { type Page, type Locator } from '@playwright/test';
 
 export class PlaywrightHomePage {
-    readonly page: Page;
-    readonly getStartedLink: Locator;
+    private readonly page: Page;
+    private readonly getStartedLink: Locator;
 
     constructor(page: Page) {
         this.page = page;
