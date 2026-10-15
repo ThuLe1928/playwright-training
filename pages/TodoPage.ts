@@ -10,7 +10,7 @@ export class TodoPage {
     }
 
     async goto() {
-        await this.page.goto('https://demo.playwright.dev/todomvc');
+        await this.page.goto('/todomvc');
     }
     
     async inputTodoTask(task: string) {
